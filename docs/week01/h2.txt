@@ -1,0 +1,3 @@
+Mengikuti prinsip dari Single Responsibility, widget Text memang dirancang khusus dengan satu tugas utama, yaitu hanya untuk menampilkan teks pada UI.
+Jika fitur tata letak seperti posisi ke tengah dipaksakan masuk ke dalam Text, maka widget lain tidak akan bisa ikut ditengahkan.
+Oleh karena itu, Center dibuat sebagai widget yang hanya dikhususkan untuk menengahkan widget lain
