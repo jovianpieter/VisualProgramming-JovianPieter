@@ -3,7 +3,7 @@ import 'package:god_widget/main.dart';
 
 class MenuItemCard extends StatelessWidget {
   final MenuItem item;
-  final int quantity;
+  final quantity;
   final void Function() onDecrement;
   final void Function() onIncrement;
 
