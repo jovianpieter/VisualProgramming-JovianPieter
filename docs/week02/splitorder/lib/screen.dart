@@ -124,13 +124,16 @@ class ReceiptSummary extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
         Text('Total Transaksi'),
         SizedBox(height: 8),
         Text(
           'Rp 0',
-          style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+          style: Theme.of(context).textTheme.displaySmall?.copyWith(
+            color: Theme.of(context).colorScheme.primary,
+            fontWeight: FontWeight.bold,
+          ),
         ),
       ],
     );
