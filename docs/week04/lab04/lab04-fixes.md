@@ -1,0 +1,6 @@
+* StoreHeader: Teks nama toko dan ulasan overflow di sebelah kanan pada ukuran 320 dp karena Row memberikan unbounded width pada teks. Solusi: Teks dibungkus dengan Expanded/Flexible + maxLines: 1 + ellipsis.
+* CategoryBar & PromoStrip: Daftar kategori dan kartu overflow ke kanan karena Row memaksakan semua elemen dalam satu garis kaku. Solusi: Ganti Row dengan SingleChildScrollView (horizontal) agar deretan bisa di scroll.
+* MenuScreen (Landscape): Terjadi bottom overflowed by 168 pixels karena Column utama memaksakan tinggi konten saat layar menyusut. Solusi: Ganti Column utama dengan ListView.builder dan masukkan header ke dalamnya agar seluruh layar bisa di scroll.
+* MenuScreen (500 Items): Aplikasi lama karena memaksa untuk merender semua 500 widget sekaligus di awal pengujian. Solusi: mengunakan ListView.builder dan GridView.builder agar data dirender secara sedikit demi sedikit.
+* CartBar: Tombol Pesan tertabrak gesture bar HP karena widget digambar hingga ke area navigasi sistem (Bonus Test). Solusi: Bungkus CartBar menggunakan SafeArea di bottomNavigationBar.
+* PromoCard & MenuTile: Teks memicu overflow saat diuji. Solusi: menambahkan constraint maxLines: 1 (atau 2) + TextOverflow.ellipsis pada widget teks.
