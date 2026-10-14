@@ -17,7 +17,17 @@ class MyApp extends StatelessWidget{
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.greenAccent),
         useMaterial3: true,
       ),
+      darkTheme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(
+          seedColor: Colors.greenAccent,
+          brightness: Brightness.dark, // Membuat latar jadi gelap tapi aksen hijau tetap ada
+        ),
+        useMaterial3: true,
+      ),
+      themeMode: ThemeMode.system,
       home: const SplitBillScreen(),
     );
   }
 }
+
+
